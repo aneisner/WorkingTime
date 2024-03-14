@@ -50,7 +50,7 @@ Options:
 
 ```
 Usage:
-  workinghours edit [options]
+  workinghours del [options]
 
 Options:
   -d, --day                                      Day of entry
