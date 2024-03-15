@@ -19,29 +19,29 @@ def main():
 
     # create the parser for the "list" command
     parser_a = subparsers.add_parser('list', help='list help')
-    parser_a.add_argument('--all', action='store_true', help='all help')
-    parser_a.add_argument('--day', help='day help')
+    parser_a.add_argument('-a', '--all', action='store_true', help='all help')
+    parser_a.add_argument('-d', '--day', help='day help')
 
     # create the parser for the "add" command
     parser_b = subparsers.add_parser('add', help='add help')
-    parser_b.add_argument('--day', help='day help')
-    parser_b.add_argument('--start-time', help='start-time help')
-    parser_b.add_argument('--end-time', help='end-time help')
-    parser_b.add_argument('--break-time', help='breaktime help')
-    parser_b.add_argument('--comment', help='comment help')
+    parser_b.add_argument('-d', '--day', help='day help')
+    parser_b.add_argument('-s', '--start-time', help='start-time help')
+    parser_b.add_argument('-e', '--end-time', help='end-time help')
+    parser_b.add_argument('-b', '--break-time', help='breaktime help')
+    parser_b.add_argument('-c', '--comment', help='comment help')
 
     # create the parser for the "edit" command
     parser_c = subparsers.add_parser('edit', help='list help')
-    parser_c.add_argument('--day', help='day help')
-    parser_c.add_argument('--start-time', action='store_true', help='start-time help')
-    parser_c.add_argument('--end-time', action='store_true', help='end-time help')
-    parser_c.add_argument('--break-time', action='store_true', help='breaktime help')
-    parser_c.add_argument('--comment', action='store_true', help='comment help')
+    parser_c.add_argument('-d', '--day', help='day help')
+    parser_c.add_argument('-s', '--start-time', action='store_true', help='start-time help')
+    parser_c.add_argument('-e', '--end-time', action='store_true', help='end-time help')
+    parser_c.add_argument('-b', '--break-time', action='store_true', help='breaktime help')
+    parser_c.add_argument('-c', '--comment', action='store_true', help='comment help')
 
     # create the parser for the "del" command
     parser_d = subparsers.add_parser('del', help='del help')
-    parser_d.add_argument('--day', help='day help')
-    parser_d.add_argument('--reset-repo', help='reset-repo help')
+    parser_d.add_argument('-d', '--day', help='day help')
+    parser_d.add_argument('-r', '--reset-repo', help='reset-repo help')
     parser_d.add_argument('--baz', choices='XYZ', help='baz help')
 
     args = parser.parse_args()
