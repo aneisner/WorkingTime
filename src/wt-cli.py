@@ -3,9 +3,20 @@
 import argparse, pprint
 
 def wt_options(args):
+
+    #workinghours list
     if args.subcmd == "list":
         print("list")
-
+    #workinghours add
+    if args.subcmd == "add":
+        print("add")
+    #workinghours edit
+    if args.subcmd == "edit":
+        print("edit")
+    #workinghours del
+    if args.subcmd == "del":
+        print("del")
+ 
     #workinghours list
     #if args.list and args.all:
     #    print("list + all")
