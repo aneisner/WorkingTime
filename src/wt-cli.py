@@ -6,17 +6,24 @@ def wt_options(args):
 
     #workinghours list
     if args.subcmd == "list":
-        print("list")
+        print("Please enter an option for the list command, see help function")
+    if args.subcmd == "list" and args.day == "day":
+        print("list and day")
+    if args.subcmd == "list" and args.all == "all":
+        print("list and all")
+
     #workinghours add
     if args.subcmd == "add":
-        print("add")
+        print("Please enter the options for the add  command, see help function")
+    if args.subcmd == "add" and  args.day == "day" and args.start_time == "st" and args.end_time == "et" and args.break_time == "bt" and args.commt == "comment":
+        print("day added")
     #workinghours edit
     if args.subcmd == "edit":
-        print("edit")
+        print("Please enter a the options for the edit command, see help function")
     #workinghours del
     if args.subcmd == "del":
-        print("del")
- 
+        print("Please enter an option for the list command, see help function")
+
     #workinghours list
     #if args.list and args.all:
     #    print("list + all")
@@ -31,7 +38,7 @@ def main():
 
     # create the parser for the "list" command
     parser_a = subparsers.add_parser('list', help='list help')
-    parser_a.add_argument('-a', '--all', action='store_true', help='all help')
+    parser_a.add_argument('-a', '--all', help='all help')
     parser_a.add_argument('-d', '--day', help='day help')
 
     # create the parser for the "add" command
@@ -56,12 +63,12 @@ def main():
     parser_d.add_argument('-r', '--reset-repo', help='reset-repo help')
     parser_d.add_argument('--baz', choices='XYZ', help='baz help')
 
-    print(type(parser))
-    print(type(subparsers))
-    print(type(parser_a))
-    print(type(parser_b))
-    print(type(parser_c))
-    print(type(parser_d))
+#    print(type(parser))
+#    print(type(subparsers))
+#    print(type(parser_a))
+#    print(type(parser_b))
+#    print(type(parser_c))
+#    print(type(parser_d))
 
     args = parser.parse_args()
     pprint.pprint(args)
